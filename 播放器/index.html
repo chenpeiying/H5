@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../img/snowflake.png" />
+		<title></title>
+		<style type="text/css">
+			legend{
+				color:blue;
+			}
+			form{
+				width: 20%;
+			}
+			a{
+				color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<form>
+			<fieldset>
+				<legend><h3>播放器</h3></legend>
+				<br><br>
+				月杜
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
+				<audio src="月杜.mp3" id="audios">	
+					您的浏览器不支持Audio标签
+				</audio>
+				<a href='#' id="playaudio" onclick="play()"/>播放</a>
+				<a href='#' id="pauseaudio" disabled="disabled" onclick="pause()"/>暂停</a>
+				<br><br>
+				她
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
+				<audio src="她.mp3" id="audios">	
+					您的浏览器不支持Audio标签
+				</audio>
+				<a href='#' id="playaudio" onclick="play()"/>播放</a>
+				<a href='#' id="pauseaudio" disabled="disabled" onclick="pause()"/>暂停</a><br><br><br><br><br><br><br><br><br><br><br><br>
+				
+				<audio src="她.mp3" controls="controls">
+					您的浏览器不支持audio
+				</audio>
+				
+			</fieldset>
+		</form>
+	</body>
+	<script>
+		function play(){
+			var playbutton=document.getElementById('playaudio');
+			var pausebutton=document.getElementById('pauseaudio');
+			var audio=document.getElementById('audios');
+			audio.play();
+			playbutton.disabled=true;
+			pausebutton.disabled=false;
+		}
+		function pause(){
+			var audio=document.getElementById('audios');
+			var playbutton=document.getElementById('playaudio');
+			var pausebutton=document.getElementById('pauseaudio');
+			pausebutton.disabled=true;
+			playbutton.disabled=false;
+			audio.pause();
+		}
+	</script>
+</html>
