@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			legend{
+				color:red;
+			}
+			span{
+				color:red;
+			}
+			form{
+				width: 35%;
+			}
+		</style>
+	</head>
+	<body>
+	<from>
+		<h1>请填写个人信息</h1>
+		<form>
+			<fieldset >
+				<legend class="one">基本信息</legend>
+				姓名 <input type="text" placeholder="请输入姓名"> <span>*</span><br>
+				年龄 <input type="number" min="0" max="100" step="1" value="20"> <span>*</span>
+			</fieldset><br>
+		
+			<fieldset>
+				<legend>你想在哪里收到邮件？</legend>
+				邮箱 <input type="search" autocomplete="on" name="gongfu" list="email" results/> <span>*</span>
+					<datalist id="email">
+						<option>1@163.com</option>
+						<option>12@163.com</option>
+						<option>123@163.com</option>
+						<option>1@qq.com</option>
+						<option>12@qq.com</option>
+						<option>123@qq.com</option>
+						<option>1@126.com</option>
+						<option>12@126.com</option>
+						<option>123@126.com</option>
+						<option>1@yahoo.com</option>
+						<option>12@yahoo.com</option>
+						<option>123@yahoo.com</option>
+					</datalist>
+			</fieldset><br>
+			<fieldset>
+				<legend>收入情况</legend>
+				月收入 
+				<select>
+				<option>20k+</option>
+				<option>31k</option>
+				<option>32k</option>
+				<option>33k</option>
+			</select><br>
+				银行卡 <input type="text">
+				有效期 <input type="date">
+			</fieldset><br>
+			<fieldset>
+				<legend>选取提交文件</legend>
+				文件 <input type="file" value="选择文件">
+			</fieldset><br>
+		<input type="button" value="提交">
+	</from>
+	</body>
+	<script>
+		$(function(){
+			$('input[name="email"]').emailComplete();
+		});
+	</script>
+</html>
