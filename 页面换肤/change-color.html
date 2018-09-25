@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+		<link rel="icon" href="./img/snowflake.png" />
+		<style>
+        form{
+        	width: 650px;
+        }
+        legend{
+		color:red;
+		}
+        
+        .bigbox>div{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 7px;
+           
+        }
+        .bigbox{
+        	height: 40px;
+        	border: 1px solid #bebebe;
+        	margin-top: 15px;
+		  }
+        .box1{
+            background: #bebebe;
+           
+        }
+        .box2{
+            background: #ca8eff;
+        }
+        .box3{
+            background: red;
+        }
+        .box4{
+            background: lightblue;
+        }
+        .box5{
+            background: #ff9224;
+        }
+        .box6{
+            background: #28ff28;
+        }
+       
+        #huanfu{
+            margin: 15px;
+        }
+        
+    </style>
+	</head>
+	
+	<body>
+	<div id="change">
+	<form>
+		<fieldset>
+			<legend><h2>页面换肤</h2></legend>
+				
+    			<div class="bigbox">
+        			<div class="box1"></div>
+       				<div class="box2"></div>
+        			<div class="box3"></div>
+        			<div class="box4"></div>  
+        			<div class="box5"></div>  
+        			<div class="box6"></div>  
+    			</div>
+		
+    			<div id="huanfu">							
+					LocalStorage将数据保存在客户端本地的硬件设备中，即使浏览器被关闭了，该数据依然存在，下次打开浏览器访问网站时仍然可以继续使用。					
+				</div>			
+		</fieldset>
+					 
+	</from>
+	</div>
+		
+	</body>
+	<script>
+		
+		$(function () {
+			//显示隐藏换肤颜色
+    		$(".btn").click(function () {
+       		 $(".bigbox").slideToggle();
+    		})
+			
+			//获取localStorage的值，并设置颜色
+   			 $(document).ready(function () {
+      		  var cookBgco = localStorage.getItem("name");
+        	$('#huanfu').removeClass().addClass(cookBgco);
+    		})
+
+			//点击换肤
+    		$(".bigbox>div").click(function () {
+        	var bgco = $(this).attr("class");
+        	$('#huanfu').removeClass().addClass(bgco);
+    		})
+
+			//确定选择 存入浏览器localStorage
+    		$(".confirm").click(function () {
+        	var bgco = $('#huanfu').attr("class");
+        	localStorage.setItem("name",bgco);
+        	var cookBgco = localStorage.getItem("name");
+    		})
+
+			//取消选择 获取存入浏览器localStorage的值并取消
+    		$(".abolish").click(function () {
+        	var cookBgco = localStorage.getItem("name");
+        	$('#huanfu').removeClass().addClass(cookBgco);
+    		})
+		})
+</script>
+
+</html>
+
+
