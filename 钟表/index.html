@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>钟表</title>
+		<style type="text/css">
+			canvas{
+				border: 1px solid #808080;
+				
+			}
+			
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" width="1300" height="1300"></canvas>
+	</body>
+	<script type="text/javascript">
+		window.onload = function(){		
+			function drawClock(){
+				var canvas = document.getElementById("canvas");
+				var context = canvas.getContext("2d");
+			//绘制钟表的圆形与分针刻度	
+				context.beginPath();
+				context.lineWidth =2;
+				context.strokeStyle= "#000000";
+				for(var i=0;i<60;i++)
+				{
+					context.moveTo(300,300);
+					context.arc(300,300,200,6*i*Math.PI/180,6*(i+1)*Math.PI/180,false);
+					context.stroke();
+				}
+			//绘制时针刻度	
+				context.beginPath();
+				context.lineWidth =4;
+				context.strokeStyle= "#FF0000";
+				for(var i=0;i<12;i++)
+				{
+					context.moveTo(300,300);
+					context.arc(300,300,200,30*i*Math.PI/180,30*(i+1)*Math.PI/180,false);
+					context.stroke();
+				}
+			//绘制分针刻度	
+				context.fillStyle="#FFFFFF";
+				context.beginPath();
+				context.moveTo(300,300);
+				context.arc(300,300,175,0,2*Math.PI,false);
+				context.closePath();
+				context.fill();
+				
+				context.beginPath();		
+				context.lineWidth = 10;
+				context.strokeStyle = "#AAAAAA";
+				context.arc(300,300,200,0,2*Math.PI,false);
+				context.stroke();
+				
+				context.beginPath();		
+				context.lineWidth = 9;
+				context.strokeStyle = "#FFFFFF";
+				context.arc(300,300,191,0,2*Math.PI,false);
+				context.stroke();			
+			//获取时间
+			
+				var date = new Date();
+				var hour = date.getHours();
+				var min = date.getMinutes();
+				var sec = date.getSeconds();
+				var H = (-90 + 30*hour+min/2)*Math.PI/180;
+				var M= (-90 + 6*min)*Math.PI/180;
+				var S = (-90 + 6*sec)*Math.PI/180;
+			
+			//绘制时针
+				
+				context.beginPath();context.lineWidth = 8;
+				context.strokeStyle = "#CA8EFF";
+				context.moveTo(300,300);
+				context.arc(300,300,110,H,H,false);
+				context.stroke();	
+			//绘制分针	
+				context.beginPath();
+				context.lineWidth = 5;
+				context.strokeStyle = "#E9967A";
+				context.moveTo(300,300);
+				context.arc(300,300,130,M,M,false);
+				context.stroke();	
+			//绘制秒针	
+				context.beginPath();
+				context.lineWidth = 3;
+				context.strokeStyle = "#FF0000";
+				context.moveTo(300,300);
+				context.arc(300,300,150,S,S,false);
+				context.stroke();	
+			//绘制钟表的中心
+				context.fillStyle="red";
+				context.beginPath();
+				context.moveTo(300,300);
+				context.arc(300,300,5,0,2*Math.PI,false);
+				context.closePath();
+				context.fill();
+				
+				context.fillStyle = "black";
+				context.beginPath();
+				context.moveTo(300,300);
+				context.arc(300,300,2,0,2*Math.PI,true);
+				context.fill();
+				
+			//绘制小时刻度
+				var hour = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2];
+        
+       		 	hour.forEach(function(num,i){
+		            var rad = 2 * Math.PI / 12 * i;
+		            var x = Math.cos(rad) * 160;
+		            var y = Math.sin(rad) * 160;
+		          //  console.log(x,y)
+		            context.font = "18px sans-serif"
+		            context.textAlign = "center";
+		            context.textBaseline = "middle";
+		            context.fillStyle='black';
+		            context.fill();
+		            context.fillText(num, x+300, y+300);
+        	});
+
+		}
+		setInterval(drawClock, 1000);
+       drawClock();
+	}	
+	</script>
+</html>
