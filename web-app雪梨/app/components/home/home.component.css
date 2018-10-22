@@ -1,0 +1,88 @@
+#content{
+    width:1200px;
+    margin: auto;
+    margin-left: 140px;
+   
+}
+#left{
+    width: 20%;
+    float: left;
+}
+#right{
+    margin-top: 10px;
+    width: 70%;
+    height:600px;
+    border: 0cm;
+    float: left;
+   
+}
+p{
+    text-align: center;
+    font-size: 17px;
+}
+#fan{width: 50%; float: left;}
+#see{width:50%;float: left;}
+#fan p,#see p{font-size: 13px;}
+#fan h3,#see h3{text-align: center;}
+#list p{text-align: center;}
+#top{ width:95%;height:70px;margin:10px auto;}
+
+#t-left ul li{float: left;padding-left: 30px;}
+#t-left ul a{font-size: 13px; text-decoration: none;}
+#t-left a:link{color: black}
+#t-left a:visited{color: black}
+#t-left a:hover{color:rgba(236, 173, 2, 0.63);}
+#t-left a:active{color:orange;}
+#t-left,#t-right{
+    margin-top:10px;
+    width:49%;
+    height:30px;
+    float: left;
+}
+#t-left{
+    margin-left:10px;
+}
+.bar1{
+    float: right;
+}
+* {
+    box-sizing: border-box;
+}
+form {
+    position: relative;
+    width: 200px;
+    margin-top:0px;
+}
+input, button {
+    border: none;
+    outline: none;
+}
+input {
+    width:100%;
+    height: 35px;
+    padding-left: 3px;
+}
+button {
+    height: 35px;
+    width: 42px;
+    cursor: pointer;
+    position: absolute;
+}
+.bar1 input {
+    border: 2px solid #dbe0db;
+    border-radius: 5px;
+    /* background: #F9F0DA;
+    color: #9E9C9C; */
+}
+.bar1 button {
+    top: 0;
+    right: 0;
+    background: #dbe0db;
+    border-radius: 0 5px 5px 0;
+}
+.bar1 button:before {
+    content: "\f002";
+    font-family: FontAwesome;
+    font-size: 16px;
+    color: #F9F0DA;
+}

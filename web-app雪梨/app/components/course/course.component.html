@@ -1,0 +1,40 @@
+<div class="content">
+  <form id="chose">
+    <select name="kecheng" id="chose1">
+      <option value="1">课程分类</option>
+      <option value="2">web前端开发</option>
+      <option value="3">web后端开发</option>
+      <option value="4">移动应用开发</option>
+      <option value="5">软件测试</option>
+      <option value="6">数据库</option>
+      <option value="7">产品设计</option>
+    </select>
+      <select name="kecheng" id="chose2">
+        <option value="1">课程体系</option>
+        <option value="2">web前端工程师</option>
+        <option value="3">web后端工程师</option>
+        <option value="5">软件测试工程师</option>
+        <option value="7">产品设计</option>
+      </select>
+    </form>
+        <ul>
+          <li *ngFor = "let lesson of lessons;">
+            <a [routerLink] = "['/course',lesson.id]">
+              <img src="{{lesson.images}}" alt="">
+              <div id="bianju">
+                  <span id="name">
+                    <p> {{lesson.lessonName}}</p><br> 
+                  </span>
+                  <span id="hide">
+                    <p>介绍{{lesson. introduction }}</p>
+                  </span>
+                  <br>
+                  <div id="bottom">
+                    <span id="left"><p>课时{{lesson.task}}</p></span>
+                    <span id="right"><p>人数{{lesson.person}}</p></span><br>
+                  </div>
+              </div>
+            </a>     
+          </li>
+        </ul>
+  </div>

@@ -1,0 +1,55 @@
+
+<div class="content">
+  <div id="left">     
+        <li *ngFor = "let community of communitys;">
+            <a [routerLink] = "['/shequ',community.id]">  
+              <div id="top">   
+                  <span id="img"><img src="{{community.images}}" alt="" width="130ox" height=" 80px"></span>
+                  <span id="name"><p><img src="img/tubiao.png">{{community.communityName}}</p> </span>
+                  <span id="introduction"><p>{{community.introduction}}</p></span>       
+              </div>
+            </a> 
+              <div id="bottom">
+                <span id="time"><p>班级-姓名 {{community.time}}</p></span><br>
+                <span id="read"><p>阅读 {{community.read}} | 评论 {{community.write}}</p></span><br>  
+              </div>         
+          <img src="img/xian2.png"height ="10px" width="700px">    
+        </li>
+  </div>
+  <div id="right">
+    <br>
+    <p>热门话题</p>
+    <img src="img/xian.png">
+    <div id="rf">
+      <ul>
+        <li>#程序设计基础#</li>
+        <li>#CMS模板制作#</li>
+        <li>#数据结构#</li>
+        <li>#数据库原理#</li>
+        <li>#CMS模板制作#</li>
+        <li>#数据结构#</li>
+        <li>#数据库原理#</li>
+        <li>#web开发#</li>
+        <li>#系统概论#</li>
+        <li>#web开发#</li>
+       
+        
+      </ul>
+    </div>
+    <div id="rr">
+      <ul>
+        <li>6万</li>
+        <li>3万</li>
+        <li>1万</li>
+        <li>6万</li>
+        <li>3万</li>
+        <li>1万</li>
+        <li>3万</li>
+        <li>2万</li>
+        <li>9万</li>
+        <li>3万</li>
+        
+      </ul>
+    </div>
+  </div>
+</div> 

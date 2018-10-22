@@ -1,0 +1,38 @@
+.content{
+    width:1000px;
+    margin: auto;
+    margin-top: 20px; 
+    font-size:14px;
+}
+#left{width:70%;float: left;}
+#right{width:25%;height:250px;float: left;margin-left: 10px;}
+#right p{padding-left:70px;}
+#right img{padding-left:70px;}
+#rf{width:70%;float: left;}
+#rr{width:28%;float: left;}
+#rr ul{padding-left:20px;}
+#rr li{color:rgb(216, 214, 214);line-height: 30px;}
+#rf li{padding-left:70px;line-height: 30px;}
+#top{width:100%;float:left;}
+#img{ height:70px; width:140px;margin:5px;margin-right:0;float: left}
+#name{width:500px;}
+#name span{position: fixed;}
+#name p{color:black;font-weight: 700;}
+#introduction p{color:rgb(99, 95, 95)}
+a{text-decoration: none;}
+#bottom{margin-top: 20px;}
+#time{width:40%;margin-top: 10px;margin-left: 10px;float: left;}
+#read{
+     width:40%;
+     margin-top: 10px;
+     float:left;
+    margin-left: 100px;
+    }
+#read p{
+    text-align: right;
+   color: rgb(180, 180, 180);
+}
+#time p{
+    
+   color: rgb(180, 180, 180);
+}

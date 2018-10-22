@@ -1,0 +1,24 @@
+.content{
+    width:1000px;
+    margin: auto;
+    margin-top: 20px; 
+}
+.content li{
+    border: 1px solid #beb6b6;
+    width:230px;
+    widows: 200px;
+    float:left;
+    margin-top:20px;
+    margin-right: 10px;
+}
+.content button{
+    background-color: darkorange;
+    float:right;
+    color:whitesmoke;
+}
+.content p{
+    color:#110f0f;
+}
+.content span{
+    color:#302d2d;
+}

@@ -1,0 +1,19 @@
+<nav>   
+  <ul class="nav">
+    <li><a [routerLink]="['/home']"><img src="img/xue.png"></a></li>
+    <li><a [routerLink]="['/home']">首页</a></li>
+    <li><a [routerLink]="['/tongbu']">同步课</a></li>
+    <li><a [routerLink]="['/course']">课程</a></li>
+    <li><a [routerLink]="['/shequ']" [queryParams]="{id:800,name:'ll'}">社区</a></li>
+    <li>
+      <div class="bar1">
+          <form>
+              <input type="text" placeholder="搜索课程、问答">          
+              <button type="submit" id="search-button" class="btn btn-default"></button>
+            </form>   
+      </div>
+  </li>
+  <li><a href="#"><img src="img/ling.png"></a></li>
+  <li><a href="#"><img src="img/ziliao2.png"></a></li>
+  </ul>
+</nav>
