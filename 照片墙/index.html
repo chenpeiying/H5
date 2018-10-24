@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>照片墙</title>
+	</head>
+	<style type="text/css">
+		body{
+			margin-left: 50px;
+			background-image: url("img/bg3.JPG");		
+		}
+/*多个div的相同样式*/		
+		div{
+			float: left;
+			height: 150px;
+			background-color: white;
+			margin-left: 30px;
+			margin-top: 40px;
+			text-align: center;
+			font-size:16px;
+			padding-top: 10px;
+			/*box-shadow: 1px 1px 1px 2px #666666;*/
+		}	
+/*鼠标经过时竖直摆放,放大1.2倍	*/
+		#div1{width: 200px;transform: rotate(-10deg);}
+		#div1:hover{transform: scale(1.2);}
+        #div2{width: 170px;transform: rotate(-10deg);}
+        #div2:hover{transform: scale(1.2);}
+		#div3{width: 200px;transform: rotate(20deg);}
+		#div3:hover{transform: scale(1.2);}
+		#div4{width: 170px;}
+		#div4:hover{transform: scale(1.2);}
+		#div5{width: 140px;transform: rotate(10deg);}
+		#div5:hover{transform: scale(1.2);}
+		#div6{width: 170px;transform: rotate(-10deg);}
+		#div6:hover{transform: scale(1.2);}
+	</style>
+	<body>
+		<div id="div1">
+			<img src="img/11.JPG" width="180px" height="120px">
+			相识
+		</div>
+		<div id="div2">
+			<img src="img/22.JPG" width="150px" height="120px">
+			凝视
+		</div>
+		<div id="div3">
+			<img src="img/33.JPG"/ width="180px" height="120px">
+			甜睡
+		</div>
+		<div id="div4">
+			<img src="img/44.JPG"/ width="150px" height="120px"> 
+			逗乐
+		</div>
+		<div id="div5">
+			<img src="img/55.JPG"/ width="120px" height="120px">
+			奔跑
+		</div>
+		<div id="div6">
+			<img src="img/66.JPG"/ width="150px" height="120px">
+			冷漠
+		</div>
+	</body>
+</html>
+
+
