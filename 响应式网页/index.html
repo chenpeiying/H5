@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>响应式网页</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<link rel="stylesheet" href="css/bootstrap.min.css">
+    	<style type="text/css">
+    		.carousel-caption h1{		
+    			font-family:"新宋体"; 
+    		}
+    	</style>
+	</head>
+	<body>
+		<!--第一部分：导航条-->
+		<div id="container">
+			<nav class="navbar navbar-inverse" > 
+				<div class="container-fluid">
+					<div class="navbar-header">
+					    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-1">
+						    <span class="sr-only">导航开关</span>
+						    <span class="icon-bar"></span>
+						    <span class="icon-bar"></span>
+						    <span class="icon-bar"></span>
+					    </button>
+					    <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;Home</a>
+					</div>
+					<div class="collapse navbar-collapse" id="bs-1">
+					    <ul class="nav navbar-nav">
+						    <li class="active"><a href="#">School profile</a></li>
+						    <li><a href="#">Institution set</a></li>
+						    <li><a href="#">personnel training</a></li>
+						    <li><a href="#">scientific research</a></li>
+						    <li><a href="#">Obtain employment</a></li>    
+					    </ul> 
+					</div>
+				</div>			
+			<div id="generic" class="carousel slide" data-ride="carousel">
+			  	<!-- 轮播（Carousel）指示标 -->
+			    <ol class="carousel-indicators">
+				    <li data-target="#generic" data-slide-to="0" class="active"></li>
+				    <li data-target="#generic" data-slide-to="1"></li>
+				    <li data-target="#generic" data-slide-to="2"></li>
+			    </ol>
+			     <!-- 轮播（Carousel）项目 -->
+			    <div class="carousel-inner" >
+			      	<div class="item active">
+			        	<img alt="First slide" src="images/banner3.jpg">	  
+					    <div class="carousel-caption">
+					    	<p><h1>welcome to This Website</h1></p>
+			          		<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+			        		<button type="button" class="btn btn-warning btn-lg">
+								Get It Now
+							</button><p></p>
+					    </div>
+			      	</div>
+			      	<div class="item">
+			        	<img alt="Second slide" src="images/banner2.jpg" >
+			        	<div class="carousel-caption">
+			          		<h1>welcome to This Website</h1>
+			          		<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+			          		<button type="button" class="btn btn-warning btn-lg">
+								Get It Now
+					  		</button>
+					  		<p></p>
+			        	</div>
+			      	</div>
+			      	<div class="item">
+			        	<img alt="Third slide" src="images/banner1.jpg"  >
+					  	<div class="carousel-caption">
+			         		<h1>welcome to This Website</h1>
+			          		<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+			         		<button type="button" class="btn btn-warning btn-lg">
+								Get It Now
+					 	</button><p></p>
+			        	</div>
+			      	</div>		      
+		    </div>
+		    
+		    <!-- 轮播（Carousel）导航 -->
+			    <a class="left carousel-control" href="#generic" data-slide="prev">
+			      <span class="glyphicon glyphicon-chevron-left"></span>
+			    </a>
+			    <a class="right carousel-control" href="#generic" data-slide="next">
+			      <span class="glyphicon glyphicon-chevron-right"></span>
+			    </a>
+		</nav> 
+ 	</div>
+ 	 <!--第二部分：文字排版-->
+ 	<div class="container">
+ 	 	<div class="row">
+		    <div class="col-md-4">
+		      	<h4>ChuJian <small>the 1</small></h4>
+		      	<p>Hebei Normal University campus is very large, the environment is particularly good,When I first entered the university, I liked it very much. This year, air conditioning was installed in our dormitory.</p>
+		    </div>
+		    <div class="col-md-4">
+		      	<h4>XueYuan <small>the 2</small></h4>
+		      	<p>The teachers of our software institute are all very good. Every teacher has profound knowledge and is very good to us. When we have learning problems, the teachers will patiently answer for us</p>
+		    </div>
+		    <div class="col-md-4">
+		      	<h4>YuanJing <small>the 3</small></h4>
+		      	<p>I hope to have a good job when I graduate from my senior year. I can afford my four-year university and work in our industry.</p>
+		    </div>
+		</div>
+ 	 </div>
+ 	<!-- 第三部分：栅格-->
+ 	<div class="container">
+		<h4>Roommate <small>Form Detail</small></h4> 		                
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>name</th>
+					<th>where</th>
+					<th>when</th>
+					<th>like</th>
+					<th>result</th>				
+			</thead>
+				<tbody>
+				<tr>
+					<td>1</td>
+					<td>Chen</td>
+					<td>HeNan</td>
+					<td>2016-09-02</td>
+					<td>sing</td>
+					<td><button type="submit" class="btn btn-success">submit</button></td>					
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Cheng</td>
+					<td>HeBei</td>
+					<td>2016-09-02</td>
+					<td>ball</td>
+					<td><button type="submit" class="btn btn-success">submit</button></td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Yang</td>
+					<td>ChangChun</td>
+					<td>2016-09-02</td>
+					<td>dancing</td>
+					<td><button type="submit" class="btn btn-success">submit</button></td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+		<!--第四部分-->
+		<div class="container">
+			<div class="row">
+		    	<div class="col-md-6">
+		      		<img src="images/pic.jpg"/>
+		      	</div>
+		      	<div class="col-md-6">
+		      		<h4>Here are some nice photos. Do you want to see them?Come with me.</h4>
+		      		<p>Today is the first time that I use bootstrap to make a web page. The time is very short, and the technical self-feeling is also a little deficient. But I hope it will get better and better.</p>
+		      	</div>
+		      	<div class = "row">
+		      	<div class="col-md-3">
+		      		<p>There are aircraft carriers in this picture</p>
+		      		<p>There are aircraft carriers in this picture</p>
+		      		<p>There are aircraft carriers in this picture</p>
+		      		<p>There are aircraft carriers in this picture</p>
+		      		<p>There are aircraft carriers in this picture</p>
+		      		<p>There are aircraft carriers in this picture</p>
+		      	</div>
+		      	<div class="col-md-3">
+		      		<img src="images/1.jpg"/>
+		      	</div>
+		      </div>
+		    </div>
+ 	 	</div>
+ 	 	</div>
+ 	 <!--第五部分-->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7">
+					<h4>Image Show <small>images</small></h4>
+					<img class="img-rounded" src="images/2.jpg"/>
+					<img class="img-rounded" src="images/3.jpg"/>
+					<img class="img-rounded" src="images/4.jpg"/>
+					<p>Here are three pictures, accounting for 7/12 of the grid system</p>
+				</div>
+				<div class="col-md-5">
+					<h4>User Login <small>form</small></h4>
+					<form class="form-horizontal" >
+						<div class="form-group">
+						    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+						    <div class="col-sm-10">
+						    	<input type="email" class="form-control col-sm-10" id="inputEmail3" placeholder="Email">
+						 	</div>
+						</div>
+						<div class="form-group">
+						    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+						    <div class="col-sm-10">
+						      	<input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+						    </div>
+						</div>
+						<div class="form-group">
+						    <div class="col-sm-offset-2 col-sm-10">
+						      	<div class="checkbox">
+						        	<label>
+						          		<input type="checkbox"> blue
+						        	</label>
+						         	<label>
+						          		<input type="checkbox"> blue
+						        	</label>
+						      	</div>
+						    </div>
+						</div>
+						<div class="form-group">
+						    <div class="col-sm-offset-2 col-sm-10">
+						      	<button type="submit" class="btn btn-primary btn-lg">Sign in</button>
+						    </div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!--第五部分：底部-->	
+			<nav class="navbar navbar-inverse" > 
+				<div class="container-fluid">
+					<a>copyright@www.index.html</a>  
+				</div>
+			</nav>	
+	</body>
+	<script src="js/jquery.js"></script>    
+    <script src="js/bootstrap.min.js"></script>  
+</html>
